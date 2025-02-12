@@ -16,7 +16,7 @@ namespace AULA.series
         public void Exclui(int id)
         {
             listaSeries[id].Excluir();
-            //Envia confirmação - E-mail. 
+            
         }
         public void Insere(Series objeto)
         {

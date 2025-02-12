@@ -42,6 +42,11 @@ namespace AULA.series
             return this.Titulo;
         }
 
+        public bool retornaExcluido()
+        {
+            return this.Excluido;
+        }
+
         public int retornaId()
         {
             return this.Id;
