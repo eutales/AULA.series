@@ -22,10 +22,10 @@ public class Program
                     AtualizarSerie();
                     break;
                 case "4":
-                    //ExcluirSerie();
+                    ExcluirSerie();
                     break;
                 case "5":
-                    //VisualizarSerie();
+                    VisualizarSerie();
                     break;
                 case "C":
                     Console.Clear();
@@ -39,6 +39,21 @@ public class Program
         Console.WriteLine("Obrigado por utilizar nossos serviços.");
         Console.ReadLine();
 
+    }
+
+    private static void VisualizarSerie()
+    {
+        Console.Write("Digite o id da série: ");
+        int indiceSerie = int.Parse(Console.ReadLine());
+        var serie = repositorio.RetornaPorId(indiceSerie);
+        Console.WriteLine(serie);
+    }
+
+    private static void ExcluirSerie()
+    {
+        Console.Write("Digite o id da série: ");
+        int indiceSerie = int.Parse(Console.ReadLine());
+        repositorio.Exclui(indiceSerie);
     }
 
     private static void AtualizarSerie()
